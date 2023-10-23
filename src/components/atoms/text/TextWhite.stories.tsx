@@ -10,5 +10,7 @@ export default meta;
 type Story = StoryObj<typeof TextWhite>;
 
 export const Preview: Story = {
-  args: {},
+  args: {
+    text: 'test',
+  },
 };

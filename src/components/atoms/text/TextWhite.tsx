@@ -1,5 +1,19 @@
-import React from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export const TextWhite = () => {
-  return <div>text white</div>;
+interface TextWhiteProps extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement> {
+  /**
+   * @default "test"
+   * text white children text
+   */
+  text?: string;
+}
+
+export const TextWhite = (props: TextWhiteProps) => {
+  const { text, ...prop } = props;
+
+  return (
+    <h2 className="font-['Anton'] webkit-white" {...prop}>
+      {text}
+    </h2>
+  );
 };
