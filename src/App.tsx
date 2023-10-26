@@ -1,9 +1,10 @@
 import React from 'react';
 
 import './index.css';
+import { TextWhite } from '@components/atoms';
 
 const App = () => {
-  return <div className="text-blue-600">app</div>;
+  return <TextWhite />;
 };
 
 export default App;

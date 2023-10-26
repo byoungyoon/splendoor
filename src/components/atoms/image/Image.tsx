@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { DetailedHTMLProps, ImgHTMLAttributes } from 'react';
 
-export const Image = () => {
-  return <div>image</div>;
+export const Image = (props: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>) => {
+  const { alt, src, ...prop } = props;
+
+  return <img alt={alt} src={src} {...prop} />;
 };

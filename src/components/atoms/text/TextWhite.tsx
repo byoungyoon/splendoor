@@ -9,10 +9,10 @@ interface TextWhiteProps extends DetailedHTMLProps<HTMLAttributes<HTMLHeadingEle
 }
 
 export const TextWhite = (props: TextWhiteProps) => {
-  const { text, ...prop } = props;
+  const { text, className, ...prop } = props;
 
   return (
-    <h2 className="font-['Anton'] webkit-white" {...prop}>
+    <h2 className={`font-['Anton'] webkit-white ${className}`} {...prop}>
       {text}
     </h2>
   );
